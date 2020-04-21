@@ -85,7 +85,7 @@ int main() {
         solve(sudoku_grid_easy);
         auto finish = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(finish - start);
-        double time = duration.count() / 100.0;
+        double time = duration.count() / 1000.0;
         total_easy += time;
     }
     std::cout << "Average: " << total_easy / 25 << "ms" << std::endl;
@@ -97,7 +97,7 @@ int main() {
         solve(sudoku_grid_medium);
         auto finish = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(finish - start);
-        double time = duration.count() / 100.0;
+        double time = duration.count() / 1000.0;
         total_medium += time;
     }
     std::cout << "Average: " << total_medium / 25 << "ms" << std::endl;
@@ -109,7 +109,7 @@ int main() {
         solve(sudoku_grid_hard);
         auto finish = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(finish - start);
-        double time = duration.count() / 100.0;
+        double time = duration.count() / 1000.0;
         total_hard += time;
     }
     std::cout << "Average: " << total_hard / 25 << "ms" << std::endl;
